@@ -90,3 +90,37 @@ if (_faction == 5) then {
 		"rhs_pilot_combat_heli"			//Pilot (Combat Helicopter)
 	];
 };
+
+// RHS Infantry + Chedaki vehicles
+if (_faction == 6) then {
+	_InfPool = [
+		"rhs_g_Soldier_F",			//Rifleman (AKM)
+		"rhs_g_medic_F",			//Medic
+		"rhs_g_Soldier_F3",			//Rifleman (AK74M)
+		"rhs_g_Soldier_AR_F",			//Machine Gunner
+		"rhs_g_Soldier_LAT_F",			//Grenadier (RPG-7V2)
+		"rhs_g_Soldier_TL_F",			//rhs_g_Soldier_TL_F
+		"rhs_g_Soldier_AT_F"			//Rifleman (RPG-26)
+	];
+	_ArmPool = [
+		"rhs_btr70_chdkz"			//BTR-70
+	];
+	_MotPool = [
+		"rhs_uaz_dshkm_chdkz",			//UAZ-3151 (DShKM)
+		"rhs_uaz_open_chdkz"			//UAZ-3151 (Open)
+	];
+	_ACHPool = [];
+	_CHPool = [
+		"RHS_Mi8amt_chdkz"			//Mi-8AMT
+	];
+	_uavPool = [];
+	_stPool = [
+		"rhs_KORD_high_INS"			//KORD (6U16)
+	];
+	_shipPool = [];
+	_diverPool = [];
+	_crewPool = [
+		"rhs_g_Crew_F"				//Crew
+	];
+	_heliCrew = [];
+};
