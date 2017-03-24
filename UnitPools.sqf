@@ -124,3 +124,151 @@ if (_faction == 6) then {
 	];
 	_heliCrew = [];
 };
+
+
+/*
+ * Faction: USA (Army-D)
+ * Requires: @rhs_gref
+ */
+if (_faction = 10) then {
+	_InfPool = [
+		//Command
+		"rhsusf_army_ocp_officer",				//Officer
+		"rhsusf_army_ocp_fso",					//Fire Support Officer
+		"rhsusf_army_ocp_jfo",					//Joint Fires Observer
+
+		//Rifleman
+		"rhsusf_army_ocp_squadleader",			//Squad Leader
+		"rhsusf_army_ocp_teamleader",			//Team Leader
+		"rhsusf_army_ocp_grenadier",			//Grenadier
+		"rhsusf_army_ocp_medic",				//Combat Medic
+		"rhsusf_army_ocp_autorifleman",			//Auto Rifleman (M249)
+		"rhsusf_army_ocp_autoriflemana",		//Auto Rifleman Ass.
+
+		"rhsusf_army_ocp_riflemanat",			//Rifleman (M136)
+		"rhsusf_army_ocp_riflemanl",			//Rifleman (Light)
+		"rhsusf_army_ocp_rifleman_m16",			//Rifleman (M16)
+		"rhsusf_army_ocp_rifleman_m4",			//Rifleman (M4)
+		"rhsusf_army_ocp_rifleman_m590",		//Breacher
+
+		//AA, AT
+		"rhsusf_army_ocp_aa",					//AA Specialist (FIM-92F)
+		"rhsusf_army_ocp_javelin_assistant",	//AT Assistant (Javelin)
+		"rhsusf_army_ocp_javelin",				//AT Specialist (Javelin)
+
+		//Specialist
+		"rhsusf_army_ocp_engineer",				//Engineer
+		"rhsusf_army_ocp_machinegunner",		//Machine Gunner
+		"rhsusf_army_ocp_machinegunnera",		//Machine Gunner Assistant
+		"rhsusf_army_ocp_uav",					//UAV Operator
+		"rhsusf_army_ocp_explosives",			//Explosives Specialist
+
+		//Sniper
+		"rhsusf_army_ocp_marksman",				//Marksman
+		"rhsusf_army_ocp_sniper",				//Sniper
+		"rhsusf_army_ocp_sniper_m107",			//Sniper (M107)
+		"rhsusf_army_ocp_sniper_m24sws"			//Sniper (M24 SWS)
+	];
+
+	_MotPool = [
+		//Cars
+		"rhsusf_m1025_d_m2",					//M1025A2 (M2)
+		"rhsusf_m1025_d_Mk19",					//M1025A2 (Mk19)
+		"rhsusf_m1025_d",						//M1025A2 (Unarmed)
+		"rhsusf_m998_d_2dr_fulltop",			//M1097A2 (2D)
+		"rhsusf_m998_d_2dr_halftop",			//M1097A2 (2D/Half)
+		"rhsusf_m998_d_2dr",					//M1097A2 (2D/Open)
+		"rhsusf_m998_d_4dr_fulltop",			//M1097A2 (2D)
+		"rhsusf_m998_d_4dr_halftop",			//M1097A2 (2D/Half)
+		"rhsusf_m998_d_4dr",					//M1097A2 (4D/Open)
+
+		//APC
+		"rhsusf_m113d_usarmy_supply",			//M113A3 (Ammo)
+		"rhsusf_m113d_usarmy",					//M113A3 (M2)
+		"rhsusf_m113d_usarmy_M240",				//M113A3 (M240)
+		"rhsusf_m113d_usarmy_medical",			//M113A3 (MEV)
+		"rhsusf_m113d_usarmy_MK19",				//M113A3 (Mk19)
+		"rhsusf_m113d_usarmy_unarmed",			//M113A3 (Unarmed)
+
+		//IFV
+		"RHS_M2A2_BUSKI",						//M2A2ODS (BUSK I)
+		"RHS_M2A3",								//M2A3
+		"RHS_M2A3_BUSKI",						//M2A3 (BUSK I)
+		"RHS_M2A3_BUSKIII",						//M2A3 (BUSK III)
+		"RHS_M6",								//M6A2
+
+
+		//MRAP
+		"rhsusf_M1117_D",						//M1117 ASV
+		"rhsusf_M1117_O",						//M1117 ASV (OD)
+		"rhsusf_M1232_usarmy_d",				//M1232
+		"rhsusf_M1232_M2_usarmy_d",				//M1232 (M2)
+		"rhsusf_M1232_MK19_usarmy_d",			//M1232 (MK 19)
+		"rhsusf_M1237_M2_usarmy_d",				//M1237 (M2)
+		"rhsusf_M1237_MK19_usarmy_d"			//M1237 (MK 19)
+	];
+
+
+	_ArmPool = [
+		//Tanks
+		"rhsusf_m1a1aimd_usarmy",				//M1A1SA
+		"rhsusf_m1a1aim_tuski_d",				//M1A1SA (TUSK I)
+		"rhsusf_m1a2sep1d_usarmy",				//M1A2SEPv1
+		"rhsusf_m1a2sep1tuskiid_usarmy",		//M1A2SEPv1 (TUSK II)
+		"rhsusf_m1a2sep1tuskid_usarmy"			//M1A2SEPv1 (TUSK I)
+
+		//Artillery
+		"rhsusf_m109d_usarmy",					//M109A6
+	];
+
+
+	//Turrets
+	_stPool = [
+		"RHS_M2StaticMG_D",						//M2HB (M3 AA)
+		"RHS_Stinger_AA_pod_D",					//FIM-92F (DMS)
+		"RHS_M2StaticMG_MiniTripod_D",			//M2HB (M3)
+		"RHS_TOW_TriPod_D",						//M41A4 TOW
+		"RHS_MK19_TriPod_D",					//Mk. 19 (M3)
+
+		//Artillery
+		"RHS_M119_D",							//M119A2
+		"RHS_M252_D"							//M252
+	];
+
+
+	//Helis
+	_ACHPool = [
+		"RHS_AH64D_AA",							//AH-64D (AA)
+		"RHS_AH64D_noradar_AA",					//AH-64D (AA/no radar)
+		"RHS_AH64D_CS",							//AH-64D (Close-Support)
+		"RHS_AH64D_noradar_CS",					//AH-64D (Close-Support/no radar)
+		"RHS_AH64D_GS",							//AH-64D (Ground-Suppression)
+		"RHS_AH64D_noradar_GS",					//AH-64D (Ground-Suppression/no radar)
+		"RHS_AH64D",							//AH-64D (Multi-Role)
+		"RHS_AH64D_noradar",					//AH-64D (Multi-Role/no radar)
+		"RHS_AH64DGrey"							//AH-64D (OIF Grey)
+	];
+	_CHPool = [
+		"RHS_CH_47F_10",						//CH-47F
+		"RHS_CH_47F_light",						//CH-47F (D)
+		"RHS_UH60M_d",							//UH-60M
+		"RHS_UH60M_MEV2_d",						//UH-60M MEV
+		"RHS_UH60M_MEV_d"						//UH-60M MEV (ESSS)
+	];
+
+
+	//Pilots
+	_heliCrew = [
+		"rhsusf_army_ocp_helipilot",			//Helicopter Pilot
+		"rhsusf_army_ocp_helicrew"				//Helicopter Crew
+	];
+
+
+	//Crew
+	_crewPool = [
+		"rhsusf_army_ocp_crewman",				//Crew
+		"rhsusf_army_ocp_combatcrewman",		//Crew (Combat)
+		"rhsusf_army_ocp_driver_armored",		//Driver (armored)
+		"rhsusf_army_ocp_driver"				//Driver
+	];
+};
